@@ -1,5 +1,9 @@
 .App {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
   text-align: center;
+  background-color: #9cbcd2 ;
 }
 
 .App-logo {
@@ -35,4 +39,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html{
+  background-color: #9cbcd2 ;
+}
+
+.card{
+  box-shadow: 10px 10px black;
 }

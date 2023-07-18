@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Person from "./person";
+import { useState } from 'react';
+import "./App.css";
+
 
 function App() {
+
+  const [show, setshow] = useState(true);
+
+const handlesetshow = (e) => {
+
+setshow((prev) => !prev);
+
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={handlesetshow}>{show ? "hide" : "show"}</button>
+      {show ? 
+      <Person
+      imgSrc="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSy2mi2SmXKoTwcWs7N0TYfNRWK5Uv74GV_Us3z1KwbyCMXhoy7"
+        fullName="john stewart"
+        bio="making people laugh"
+        profession="comedian"
+      />
+      : null}
     </div>
   );
 }
